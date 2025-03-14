@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-emerald-50/50 text-gray-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-500 text-white font-semibold px-6 py-3 rounded-lg
+           shadow-lg transition-all duration-300
+           hover:bg-emerald-600 hover:shadow-xl hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50
+           active:bg-emerald-700 active:shadow-inner;
+  }
+
+  .btn-secondary {
+    @apply bg-amber-500 text-white font-semibold px-6 py-3 rounded-lg
+           shadow-lg transition-all duration-300
+           hover:bg-amber-600 hover:shadow-xl hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50
+           active:bg-amber-700 active:shadow-inner;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-xl shadow-md
+           transition-all duration-300 
+           hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-emerald-200
+           bg-white/90 shadow-sm
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+           transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r 
+           from-emerald-500 via-emerald-600 to-amber-500;
+  }
+}
+
+@layer utilities {
+  .leaf-pattern {
+    @apply bg-emerald-50/50;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0C13.432 0 0 13.432 0 30c0 16.568 13.432 30 30 30 16.568 0 30-13.432 30-30C60 13.432 46.568 0 30 0zm0 45c-8.284 0-15-6.716-15-15 0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15z' fill='%23059669' fill-opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  .animate-pulse-green {
+    animation: pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes pulse-green {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
